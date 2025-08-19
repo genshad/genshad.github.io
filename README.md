@@ -1,2 +1,2 @@
 сайт визитка
-genshad.github.io
+https://genshad.github.io
