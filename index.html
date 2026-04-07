@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ГлобалТаможня — Растаможка товаров в РФ</title>
+    <title>Алексей Смирнов — Инженер Искусственного Интеллекта</title>
     <style>
         * {
             margin: 0;
@@ -12,93 +12,130 @@
         }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f7f9fc;
+            background: #f0f2f5;
             color: #333;
             line-height: 1.7;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
         header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
             color: white;
             text-align: center;
-            padding: 70px 20px;
-            border-radius: 10px;
+            padding: 60px 20px;
+            border-radius: 12px;
             margin-bottom: 30px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         header h1 {
-            font-size: 2.6em;
+            font-size: 2.8em;
             margin-bottom: 10px;
             font-weight: 700;
         }
         header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+            font-size: 1.3em;
+            opacity: 0.95;
             max-width: 700px;
             margin: 0 auto;
         }
+        .role-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
         section {
             background: white;
-            padding: 30px;
+            padding: 35px;
             margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         h2 {
-            color: #1e3c72;
-            margin-bottom: 20px;
-            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #4ca1af;
+            padding-bottom: 10px;
             font-weight: 600;
         }
         ul {
             list-style: none;
         }
         ul li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+        }
+        ul li:last-child {
+            border-bottom: none;
         }
         ul li::before {
-            content: "✓";
-            color: #27ae60;
+            content: "▹";
+            color: #4ca1af;
             font-weight: bold;
-            margin-right: 10px;
-            background: #e8f5e8;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .skill-item {
+            background: #eef2f5;
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: transform 0.2s;
+        }
+        .skill-item:hover {
+            transform: translateY(-3px);
+            background: #4ca1af;
+            color: white;
+        }
+        .project-card {
+            background: #f9fbfd;
+            border-left: 4px solid #4ca1af;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
         }
         .highlight {
-            background: #e3f2fd;
-            padding: 15px;
+            background: #e8f4f8;
+            padding: 20px;
             border-radius: 8px;
-            margin: 15px 0;
+            margin: 20px 0;
             font-weight: 500;
-            color: #1565c0;
+            color: #2c3e50;
             text-align: center;
+            border: 1px dashed #4ca1af;
         }
         .contact-info {
             text-align: center;
-            font-size: 1.1em;
         }
         .contact-info p {
-            margin: 10px 0;
+            margin: 12px 0;
             font-size: 1.1em;
         }
         .btn {
             display: inline-block;
-            background: #1e3c72;
+            background: #2c3e50;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             text-decoration: none;
             border-radius: 6px;
             margin: 10px 5px;
@@ -106,33 +143,30 @@
             transition: background 0.3s;
         }
         .btn:hover {
-            background: #0d264d;
+            background: #1a252f;
         }
-        .btn-whatsapp {
-            background: #25D366;
+        .btn-email {
+            background: #4ca1af;
         }
-        .btn-whatsapp:hover {
-            background: #1da856;
+        .btn-email:hover {
+            background: #3b8d99;
         }
         footer {
             text-align: center;
-            padding: 25px;
-            color: #666;
-            font-size: 0.95em;
-            margin-top: 30px;
+            padding: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 40px;
             border-top: 1px solid #eee;
         }
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2.1em;
-            }
-            header p {
-                font-size: 1em;
+                font-size: 2.2em;
             }
             .btn {
                 display: block;
                 margin: 10px auto;
-                width: 80%;
+                width: 90%;
             }
         }
     </style>
@@ -142,57 +176,103 @@
     <div class="container">
 
         <header>
-            <h1>ГлобалТаможня</h1>
-            <p>Профессиональная растаможка товаров в России. Быстро, прозрачно, без лишних хлопот.</p>
+            <h1>Алексей Смирнов</h1>
+            <p>Разрабатываю интеллектуальные системы, которые решают реальные бизнес-задачи.</p>
+            <div class="role-badge">AI Engineer | Machine Learning Developer</div>
         </header>
 
         <section>
-            <h2>Наши услуги</h2>
-            <ul>
-                <li>Растаможка импортных товаров (ЕАЭС, РФ)</li>
-                <li>Таможенное оформление для ИП и юрлиц</li>
-                <li>Расчёт пошлин, НДС, акцизов</li>
-                <li>Оформление сертификатов и деклараций</li>
-                <li>Сопровождение на всех этапах</li>
-                <li>Экспресс-оформление — от 24 часов</li>
-            </ul>
+            <h2>Обо мне</h2>
+            <p>
+                Инженер искусственного интеллекта с опытом разработки и внедрения ML-моделей в производство. 
+                Специализируюсь на компьютерном зрении (CV) и обработке естественного языка (NLP). 
+                Умею превращать сложные математические модели в работающие сервисы с высокой нагрузкой.
+            </p>
             <div class="highlight">
-                Консультация бесплатно! Поможем сэкономить до 30% на платежах.
+                🚀 Открыт к предложениям по разработке сложных AI-решений и оптимизации нейросетей.
             </div>
         </section>
 
         <section>
-            <h2>Почему клиенты выбирают нас?</h2>
+            <h2>Технические навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Python</div>
+                <div class="skill-item">PyTorch / TensorFlow</div>
+                <div class="skill-item">OpenCV</div>
+                <div class="skill-item">Transformers (HuggingFace)</div>
+                <div class="skill-item">Docker & Kubernetes</div>
+                <div class="skill-item">FastAPI / Flask</div>
+                <div class="skill-item">SQL & NoSQL</div>
+                <div class="skill-item">Git & CI/CD</div>
+                <div class="skill-item">MLOps</div>
+                <div class="skill-item">Pandas / NumPy</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Опыт работы</h2>
             <ul>
-                <li>Опыт более 10 лет на рынке логистики</li>
-                <li>Работаем с любыми категориями товаров</li>
-                <li>Прозрачная калькуляция стоимости</li>
-                <li>Официальное оформление, без "серых" схем</li>
-                <li>Поддержка 24/7 на этапе оформления</li>
-                <li>Сотрудничаем с крупными таможенными постами</li>
+                <li>
+                    <div>
+                        <strong>Senior AI Engineer</strong> (2021 — Настоящее время)<br>
+                        <em>Разработка архитектуры нейросетей для анализа видео в реальном времени.</em>
+                        <ul>
+                            <li>Снижение ложных срабатываний детекции объектов на 15% за счет аугментации данных.</li>
+                            <li>Оптимизация инференса моделей (TensorRT), ускорение работы в 3 раза.</li>
+                            <li>Внедрение пайплайнов MLOps для автоматического переобучения моделей.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li style="margin-top: 20px;">
+                    <div>
+                        <strong>Machine Learning Developer</strong> (2019 — 2021)<br>
+                        <em>Создание чат-ботов и систем классификации текста.</em>
+                        <ul>
+                            <li>Разработка NLP-модели для автоматической сортировки обращений клиентов (BERT).</li>
+                            <li>Интеграция голосовых ассистентов в банковское приложение.</li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Проекты</h2>
+            
+            <div class="project-card">
+                <h3>🔍 Система детекции дефектов производства</h3>
+                <p>Компьютерное зрение для контроля качества на конвейере. Точность определения брака >98%. Использован стек: YOLOv8, OpenCV, Python.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>💬 Умный ассистент поддержки</h3>
+                <p>RAG-система на базе LLM для технической поддержки. Автоматически отвечает на 60% типовых вопросов, используя базу знаний компании.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>📈 Прогнозирование спроса</h3>
+                <p>Временные ряды для ритейла. Предсказание продаж с учетом сезонности и промо-акций. Алгоритмы: XGBoost, Prophet.</p>
+            </div>
         </section>
 
         <section>
             <h2>Контакты</h2>
             <div class="contact-info">
-                <p>📞 <strong>Телефон:</strong> +7 (495) 987-65-43</p>
-                <p>📧 <strong>Email:</strong> info@globaltam.ru</p>
-                <p>🏢 <strong>Офис:</strong> г. Москва, Волоколамское ш., д. 98</p>
-                <p>🕒 <strong>Режим работы:</strong> Пн–Пт: 9:00–18:00</p>
-                <p>🌐 <strong>ИНН:</strong> 7712345678 | <strong>ОГРН:</strong> 1234567890123</p>
+                <p>📧 <strong>Email:</strong> alexey.ai@example.com</p>
+                <p>💼 <strong>LinkedIn:</strong> linkedin.com/in/alexey-ai</p>
+                <p>🐙 <strong>GitHub:</strong> github.com/alexey-dev</p>
+                <p>📍 <strong>Локация:</strong> Москва, РФ (готов к удаленной работе)</p>
 
-                <a href="tel:+74959876543" class="btn">Позвонить</a>
-                <a href="https://wa.me/74959876543" target="_blank" class="btn btn-whatsapp">Написать в WhatsApp</a>
-                <a href="mailto:info@globaltam.ru" class="btn" style="background: #9b59b6;">Написать на email</a>
+                <a href="mailto:alexey.ai@example.com" class="btn btn-email">Написать на Email</a>
+                <a href="#" class="btn">Скачать Резюме (PDF)</a>
             </div>
         </section>
 
     </div>
 
     <footer>
-        &copy; 2025 ГлобалТаможня. Все права защищены.<br>
-        Официальный партнёр крупных логистических операторов. Лицензия № ТМ-1123.
+        &copy; 2025 Алексей Смирнов. Все права защищены.<br>
+        Разработано с использованием современных технологий ИИ.
     </footer>
 
 </body>
